@@ -48,9 +48,8 @@ class AppAutoLauncherImplWindows extends AppAutoLauncher {
   @override
   Future<bool> enable() async {
     _regKey.createValue(
-      RegistryValue(
+      RegistryValue.string(
         appName,
-        RegistryValueType.string,
         _registryValue,
       ),
     );
